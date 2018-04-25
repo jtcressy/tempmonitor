@@ -1,1 +1,3 @@
-print("Hello World!")
+from tempmonitor.commandline import main
+
+main()
