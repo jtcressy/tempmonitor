@@ -9,7 +9,8 @@ setup(
     author='jtcressy',
     author_email='joel@jtcressy.net',
     description='Temperature monitor for raspberry pi sense hat',
-    entry_points = {
+    scripts=['bin/tempmonitor'],
+    entry_points={
         'console_scripts': ['tempmonitor=tempmonitor.commandline:main'],
     }
 )
