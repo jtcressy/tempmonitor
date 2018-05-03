@@ -16,6 +16,6 @@ RUN apt-get update && \
 RUN pip3 install .
 
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
-COPY supervisor-app.conf /etc/supervisor/conf.d/
+COPY supervisor-tempmonitor.conf /etc/supervisor/conf.d/
 
 CMD ["supervisord", "-n"]
