@@ -6,9 +6,10 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y \
     git \
-    npm \
-    pip3 install -U pip setuptools && \
+    npm && \
     rm -rf /var/lib/apt/lists/*
+
+RUN pip3 install -U pip setuptools
 
 COPY . /app
 
