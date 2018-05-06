@@ -17,8 +17,8 @@ INFLUXDB_PORT = int(os.environ.get("INFLUXDB_PORT", "8086"))
 INFLUXDB_USER = os.environ.get("INFLUXDB_USER", "root")
 INFLUXDB_PASSWORD = os.environ.get("INFLUXDB_PASSWORD", "root")
 INFLUXDB_DBNAME = os.environ.get("INFLUXDB_DBNAME", "sensehat")
-INFLUXDB_SESSION = os.environ.get("INFLUXDB_SESSION", "sensehat")
-INFLUXDB_RUNNUM = os.environ.get("INFLUXDB_RUNNUM", datetime.datetime.now().strftime("%Y%m%d%H%M"))
+INFLUXDB_SESSION = os.environ.get("INFLUXDB_SESSION", "sensehat")  # Optional
+INFLUXDB_RUNNUM = os.environ.get("INFLUXDB_RUNNUM", datetime.datetime.now().strftime("%Y%m%d%H%M"))  # Optional
 
 
 def get_data_points(hat: SenseHat, session, run_num):

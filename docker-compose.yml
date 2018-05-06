@@ -6,9 +6,24 @@ services:
       - 8086:8086
     volumes:
       - ./influxdb:/data
+    environment:
+      ADMIN_USER: "root"
+      INFLUXDB_INIT_PWD: "root"
+      PRE_CREATE_DB: "climatedata"
+
   grafana:
     image: fg2it/grafana-armhf
     ports:
       - 3000:3000
   tempmonitor:
     build: .
+    links:
+      - influxdb
+    environment:
+      INFLUXDB_HOST: "influxdb"
+      INFLUXDB_PORT: "8086"
+      INFLUXDB_USER: "root"
+      INFLUXDB_PASSWORD: "root"
+      INFLUXDB_DBNAME: "climatedata"
+
+
