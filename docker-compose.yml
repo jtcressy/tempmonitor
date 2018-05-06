@@ -17,6 +17,8 @@ services:
       - 3000:3000
   tempmonitor:
     build: .
+    devices:
+      - "/dev/gpiomem:/dev/gpiomem"
     links:
       - influxdb
     environment:
