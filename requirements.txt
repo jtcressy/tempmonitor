@@ -1,3 +1,5 @@
 flask
 flask-restful
-RPi.GPIO
+sense-hat
+sense-emu
+influxdb

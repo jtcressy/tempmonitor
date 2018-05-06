@@ -1,0 +1,14 @@
+version: '3'
+services:
+  influxdb:
+    image: hypriot/rpi-influxdb
+    ports:
+      - 8086:8086
+    volumes:
+      - ./influxdb:/data
+  grafana:
+    image: fg2it/grafana-armhf
+    ports:
+      - 3000:3000
+  tempmonitor:
+    build: .
