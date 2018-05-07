@@ -5,6 +5,8 @@ FROM arm32v7/python:3-jessie
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y \
+    python3-numpy \
+    python3-pil \
     git \
     npm && \
     rm -rf /var/lib/apt/lists/*

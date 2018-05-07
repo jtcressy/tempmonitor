@@ -16,7 +16,7 @@ services:
     ports:
       - 3000:3000
   tempmonitor:
-    image: jtcressy/tempmonitor:latest
+    build: .
     devices:
       - "/dev/gpiomem:/dev/gpiomem"
     links:

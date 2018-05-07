@@ -4,7 +4,7 @@ from tempmonitor.web import app
 from tempmonitor import logger_setup
 
 try:
-    from tempmonitor.daemon import main as dmain
+    import tempmonitor.daemon
 except ImportError as e:
     print(f"Daemon unavailable when not running on a raspberrypi! {e}")
 
@@ -19,7 +19,7 @@ def main(argv):
         app.run(host=os.environ.get("WEBHOST", "0.0.0.0"), port=os.environ.get("WEBPORT", "8080"))
     else:
         try:
-            dmain()
+            tempmonitor.daemon.main()
         except KeyboardInterrupt:
             logger.info("Keyboard Interrupt. Exiting.")
 
