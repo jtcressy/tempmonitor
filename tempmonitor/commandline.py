@@ -9,12 +9,12 @@ except ImportError as e:
     print(f"Daemon unavailable when not running on a raspberrypi! {e}")
 
 
-def main():
+def main(argv):
     logger = logger_setup()
     parser = argparse.ArgumentParser(description="Start tempmonitor daemon or web server")
     parser.add_argument('--daemon', dest='daemon', action="store_true", help="Start in daemon mode")
     parser.add_argument('--web', dest='web', action="store_true", help="Start in web server mode")
-    args = parser.parse_args()
+    args = parser.parse_args(argv[1:])
     if args.web:
         app.run(host=os.environ.get("WEBHOST", "0.0.0.0"), port=os.environ.get("WEBPORT", "8080"))
     else:

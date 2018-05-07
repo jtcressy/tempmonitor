@@ -1,3 +1,3 @@
 from tempmonitor.commandline import main
-
-main()
+import sys
+main(sys.argv)
