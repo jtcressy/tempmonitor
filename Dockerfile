@@ -1,4 +1,4 @@
-FROM arm32v7/python:3-jessie
+FROM resin/rpi-raspbian
 
 # NOTE: MUST RUN WITH --device /dev/gpiomem
 
