@@ -16,6 +16,11 @@ RUN pip3 install -U pip setuptools
 COPY . /app
 
 WORKDIR /app
+RUN apt-get update && \
+    apt-get install -y \
+    python3-pil \
+    python3-numpy && \
+    rm -rf /var/lib/apt/lists/*
 RUN pip3 install -e .
 # RUN cd /app/tempmonitor/web/static && npm install && npm run build
 
