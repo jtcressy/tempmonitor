@@ -15,6 +15,10 @@ services:
     image: fg2it/grafana-armhf:v5.1.0
     ports:
       - 3000:3000
+    volumes:
+      - ./grafana:/var/lib/grafana
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: "secret"
   tempmonitor:
     build: .
     devices:
