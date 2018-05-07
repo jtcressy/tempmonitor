@@ -7,6 +7,7 @@ setup(
     install_requires=[
         'flask',
         'flask-restful',
+        'sense-hat',
         'influxdb'
     ],
     url='https://github.com/jtcressy/tempmonitor',
