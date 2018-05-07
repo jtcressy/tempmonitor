@@ -13,7 +13,7 @@ RUN apt-get update && \
 RUN pip3 install -U pip setuptools
 
 COPY . /app
-RUN echo "[global]\
+RUN echo "[global]\n\
 extra-index-url=https://www.piwheels.org/simple" >> /etc/pip.conf
 WORKDIR /app
 RUN pip3 install -e .
