@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian
+FROM arm32v7/python:3-stretch
 
 # NOTE: MUST RUN WITH --device /dev/gpiomem
 
