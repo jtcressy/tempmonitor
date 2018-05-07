@@ -3,6 +3,7 @@ FROM arm32v7/python:3-stretch
 # NOTE: MUST RUN WITH --device /dev/gpiomem
 RUN echo "deb http://archive.raspbian.org/raspbian wheezy main contrib non-free \
 deb-src http://archive.raspbian.org/raspbian wheezy main contrib non-free" >> /etc/apt/sources.list
+RUN wget https://archive.raspbian.org/raspbian.public.key -O - | sudo apt-key add -
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y \
