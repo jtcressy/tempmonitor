@@ -1,4 +1,5 @@
 #!/usr/bin/env python
 
 import tempmonitor.commandline
-tempmonitor.commandline.main()
+import sys
+tempmonitor.commandline.main(sys.argv)
