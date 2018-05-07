@@ -5,8 +5,8 @@ FROM resin/rpi-raspbian
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y \
-    python3-numpy \
-    python3-pil \
+    python3 \
+    python3-pip \
     git \
     npm && \
     rm -rf /var/lib/apt/lists/*
