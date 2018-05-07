@@ -8,7 +8,6 @@ setup(
         'flask',
         'flask-restful',
         'sense-hat',
-        'sense-emu',
         'influxdb'
     ],
     url='https://github.com/jtcressy/tempmonitor',

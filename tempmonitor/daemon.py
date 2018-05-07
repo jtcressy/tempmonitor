@@ -1,9 +1,5 @@
 import urllib.request
-try:
-    from sense_hat import SenseHat
-except ImportError:
-    from sense_emu import SenseHat
-    pass
+from sense_hat import SenseHat
 import sys
 import os
 import time
