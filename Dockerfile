@@ -16,10 +16,6 @@ COPY . /app
 RUN echo "[global]\
 extra-index-url=https://www.piwheels.org/simple" >> /etc/pip.conf
 WORKDIR /app
-RUN apt-get update && \
-    apt-get install -y \
-    python3-pil && \
-    rm -rf /var/lib/apt/lists/*
 RUN pip3 install -e .
 # RUN cd /app/tempmonitor/web/static && npm install && npm run build
 
