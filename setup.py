@@ -4,6 +4,13 @@ setup(
     name='tempmonitor',
     version='0.0.1a',
     packages=['tempmonitor'],
+    install_requires=[
+        'flask',
+        'flask-restful',
+        'sense-hat',
+        'sense-emu',
+        'influxdb'
+    ],
     url='https://github.com/jtcressy/tempmonitor',
     license='GPL',
     author='jtcressy',
